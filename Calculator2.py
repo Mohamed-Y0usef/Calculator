@@ -1,9 +1,8 @@
 class Calculator:
     
-    def __init__(self , number1 , number2 , operator): 
+    def __init__(self , number1 , number2): 
         self.number1 = number1
         self.number2 = number2
-        self.operator = operator
     
     def Sum (self):
         return self.number1 + self.number2 
@@ -22,25 +21,23 @@ class Calculator:
         for x in range(self.number2): 
             number = number * self.number1 
         return number 
-    def op(self):
-        return self.operator
         
 i = "y"
 while i == "y": 
     number1 = int(input ("Enter the first number : "))
     operator = input ("Enter the operator : ")
     number2 = int(input ("Enter the second number : "))
-    C = Calculator(number1 , number2 , operator)
+    C = Calculator(number1 , number2)
     
     if operator == "+":
-        print(C.Sum())
+        print("\nSum =" , C.Sum())
     elif operator == "-":
-        print(C.Sub())
+        print("\nSubtraction =" , C.Sub())
     elif operator == "*":
-        print(C.Multiplay())
+        print("\nMultiplay =" , C.Multiplay())
     elif operator == "/":
-        print(C.Div())
+        print("\nDivision =" , C.Div())
     elif operator == "^":
-        print(C.Pow())
+        print("\nPower =" , C.Pow())
     
     i = input("press 'y' if you want to calculate again and press 'n' if you want to stop : ")
